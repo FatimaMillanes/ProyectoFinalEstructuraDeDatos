@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProyectoFinal"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="PELICULAS &amp; SERIES" Height="450" Width="800">
     <Grid Background="#FF3F335F">
         <ListView x:Name="lstPelis" HorizontalAlignment="Left" Height="249" Margin="54,49,0,0" VerticalAlignment="Top" Width="171" Background="#FF5E467F" BorderBrush="{x:Null}" FontFamily="Lucida Sans" Foreground="#FF858585" FontSize="14" SelectionChanged="lstPelis_SelectionChanged_1">
             <ListView.View>
