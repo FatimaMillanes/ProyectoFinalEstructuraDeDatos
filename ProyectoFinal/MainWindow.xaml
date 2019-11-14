@@ -1,0 +1,62 @@
+﻿<Window x:Class="ProyectoFinal.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProyectoFinal"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Background="#FF3F335F">
+        <ListView x:Name="lstPelis" HorizontalAlignment="Left" Height="249" Margin="54,49,0,0" VerticalAlignment="Top" Width="171" Background="#FF5E467F" BorderBrush="{x:Null}" FontFamily="Lucida Sans" Foreground="#FF858585" FontSize="14">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn DisplayMemberBinding="{Binding Titulo}" Header="Titulo"></GridViewColumn>
+                    <GridViewColumn DisplayMemberBinding="{Binding Año}" Header="Año"></GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <TextBlock HorizontalAlignment="Left" Margin="430,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Segoe UI Black" FontSize="36" Foreground="#FFC8C8C8"><Run Text="PEL"/><Run Text="I"/><Run Text="CULAS Y SERIES"/></TextBlock>
+        <Button x:Name="btnOrdenar1" Content="Ordenar A-Z" HorizontalAlignment="Left" Margin="54,318,0,0" VerticalAlignment="Top" Width="75" Click="btnOrdenar1_Click" BorderBrush="{x:Null}" Foreground="White">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF5C3CC2" Offset="1"/>
+                    <GradientStop Color="#FF8579AB"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnOrdenar2" Content="Ordenar Z-A" HorizontalAlignment="Left" Margin="54,358,0,0" VerticalAlignment="Top" Width="75" Click="btnOrdenar2_Click" Foreground="White">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF8579AB" Offset="0"/>
+                    <GradientStop Color="#FF5C3CC2" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnAño" Content="↑ Año" HorizontalAlignment="Left" Margin="150,318,0,0" VerticalAlignment="Top" Width="75" Click="btnAño_Click" Foreground="White">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF8579AB" Offset="0"/>
+                    <GradientStop Color="#FF5C3CC2" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnAño2" Content="↓ Año" HorizontalAlignment="Left" Margin="150,358,0,0" VerticalAlignment="Top" Width="75" Click="btnAño2_Click" Foreground="White">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF8579AB" Offset="0"/>
+                    <GradientStop Color="#FF5C3CC2" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnNuevo" Content="Nuevo Elemento" HorizontalAlignment="Left" Margin="244,49,0,0" VerticalAlignment="Top" Width="109" Foreground="White" Click="btnNuevo_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF8579AB" Offset="0"/>
+                    <GradientStop Color="#FF5C3CC2" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Grid x:Name="grdNuevo" HorizontalAlignment="Left" Height="309" Margin="244,68,0,0" VerticalAlignment="Top" Width="528"/>
+
+    </Grid>
+</Window>
