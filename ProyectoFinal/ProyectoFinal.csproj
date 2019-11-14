@@ -55,6 +55,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="EditarElemento.xaml.cs">
+      <DependentUpon>EditarElemento.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ParametrosNuevos.xaml.cs">
       <DependentUpon>ParametrosNuevos.xaml</DependentUpon>
     </Compile>
@@ -65,6 +68,13 @@
       <DependentUpon>ParametrosSeries.xaml</DependentUpon>
     </Compile>
     <Compile Include="Series.cs" />
+    <Compile Include="VisualizarElemento.xaml.cs">
+      <DependentUpon>VisualizarElemento.xaml</DependentUpon>
+    </Compile>
+    <Page Include="EditarElemento.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -86,6 +96,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ParametrosSeries.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VisualizarElemento.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

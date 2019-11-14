@@ -33,7 +33,8 @@ namespace ProyectoFinal
              if (rbPelicula.IsChecked == true) {
                  grdPelis.Children.Add(new ParametrosPeliculas());
                 grdSeries.Children.Clear();
-             }
+               
+            }
 
 
 
@@ -45,7 +46,10 @@ namespace ProyectoFinal
              {
                  grdSeries.Children.Add(new ParametrosSeries());
                 grdPelis.Children.Clear();
+               
             }
          }
+
+        
     }
 }

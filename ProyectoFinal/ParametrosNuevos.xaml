@@ -7,29 +7,13 @@
              mc:Ignorable="d" d:DesignWidth="800" Height="320.26">
     <Grid>
         <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="AGREGAR NUEVO ELEMENTO" VerticalAlignment="Top" Height="53" Width="305" Foreground="#FF8C8C8C" FontSize="18" FontFamily="Segoe UI Black"/>
-        <TextBlock HorizontalAlignment="Left" Margin="10,40,0,0" TextWrapping="Wrap" Text="Tipo:" VerticalAlignment="Top" Foreground="White" FontFamily="Lucida Sans"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,40,0,0" TextWrapping="Wrap" Text="TIPO:" VerticalAlignment="Top" Foreground="White" FontFamily="Lucida Sans"/>
        
         
 
-        <RadioButton x:Name="rbPelicula" Content="Pelicula" HorizontalAlignment="Left" Margin="68,38,0,0" VerticalAlignment="Top" Foreground="White" Checked="RadioButton_Checked"/>
-        <RadioButton x:Name="rbSerie" Content="Serie" HorizontalAlignment="Left" Margin="169,38,0,0" VerticalAlignment="Top" Foreground="White" Background="White" BorderBrush="White" Checked="rbSerie_Checked"/>
+        <RadioButton x:Name="rbPelicula" Content="PELICULA" HorizontalAlignment="Left" Margin="68,38,0,0" VerticalAlignment="Top" Foreground="White" Checked="RadioButton_Checked"/>
+        <RadioButton x:Name="rbSerie" Content="SERIE" HorizontalAlignment="Left" Margin="169,38,0,0" VerticalAlignment="Top" Foreground="White" Background="White" BorderBrush="White" Checked="rbSerie_Checked"/>
         <Grid x:Name="grdPelis" HorizontalAlignment="Left" Height="226" Margin="0,59,0,0" VerticalAlignment="Top" Width="800"/>
-        <Button x:Name="btnGuardar" Content="Guardar" HorizontalAlignment="Left" Margin="10,285,0,0" VerticalAlignment="Top" Width="75" BorderBrush="{x:Null}" Foreground="White">
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FF5C3CC2" Offset="1"/>
-                    <GradientStop Color="#FF8579AB"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
-        <Button x:Name="btnCancelar" Content="Cancelar" HorizontalAlignment="Left" Margin="117,285,0,0" VerticalAlignment="Top" Width="75" BorderBrush="{x:Null}" Foreground="White">
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FF5C3CC2" Offset="1"/>
-                    <GradientStop Color="#FF8579AB"/>
-                </LinearGradientBrush>
-            </Button.Background>
-        </Button>
         <Grid x:Name="grdSeries" HorizontalAlignment="Left" Height="226" Margin="0,59,0,0" VerticalAlignment="Top" Width="800"/>
 
     </Grid>

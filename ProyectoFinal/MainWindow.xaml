@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid Background="#FF3F335F">
-        <ListView x:Name="lstPelis" HorizontalAlignment="Left" Height="249" Margin="54,49,0,0" VerticalAlignment="Top" Width="171" Background="#FF5E467F" BorderBrush="{x:Null}" FontFamily="Lucida Sans" Foreground="#FF858585" FontSize="14">
+        <ListView x:Name="lstPelis" HorizontalAlignment="Left" Height="249" Margin="54,49,0,0" VerticalAlignment="Top" Width="171" Background="#FF5E467F" BorderBrush="{x:Null}" FontFamily="Lucida Sans" Foreground="#FF858585" FontSize="14" SelectionChanged="lstPelis_SelectionChanged_1">
             <ListView.View>
                 <GridView>
                     <GridViewColumn DisplayMemberBinding="{Binding Titulo}" Header="Titulo"></GridViewColumn>
@@ -57,6 +57,47 @@
             </Button.Background>
         </Button>
         <Grid x:Name="grdNuevo" HorizontalAlignment="Left" Height="309" Margin="244,68,0,0" VerticalAlignment="Top" Width="528"/>
+        <Button x:Name="btnCancelar" Visibility="Hidden"  Content="Cancelar" HorizontalAlignment="Left" Margin="697,358,0,0" VerticalAlignment="Top" Width="75" BorderBrush="{x:Null}" Foreground="White" Click="btnCancelar_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF5C3CC2" Offset="1"/>
+                    <GradientStop Color="#FF8579AB"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnGuardar" Visibility="Hidden" Content="Guardar" HorizontalAlignment="Left" Margin="594,358,0,0" VerticalAlignment="Top" Width="75" BorderBrush="{x:Null}" Foreground="White" Click="btnGuardar_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF5C3CC2" Offset="1"/>
+                    <GradientStop Color="#FF8579AB"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Grid x:Name="grdEditar" HorizontalAlignment="Left" Height="304" Margin="244,73,0,0" VerticalAlignment="Top" Width="540"/>
+        <Button x:Name="btnEditar" Visibility="Hidden" Content="Habilitar Edicion" HorizontalAlignment="Left" Margin="244,358,0,0" VerticalAlignment="Top" Width="131" BorderBrush="{x:Null}" Foreground="White" Click="btnEditar_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF5C3CC2" Offset="1"/>
+                    <GradientStop Color="#FF8579AB"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnEliminarElemento" Visibility="Hidden" Content="Eliminar Elemento" HorizontalAlignment="Left" Margin="398,358,0,0" VerticalAlignment="Top" Width="131" BorderBrush="{x:Null}" Foreground="White" Click="btnEliminarElemento_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF5C3CC2" Offset="1"/>
+                    <GradientStop Color="#FF8579AB"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnCancelar2" Visibility="Hidden" Content="Cancelar" HorizontalAlignment="Left" Margin="550,358,0,0" VerticalAlignment="Top" Width="131" BorderBrush="{x:Null}" Foreground="White" Click="btnCancelar2_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF5C3CC2" Offset="1"/>
+                    <GradientStop Color="#FF8579AB"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
 
     </Grid>
 </Window>

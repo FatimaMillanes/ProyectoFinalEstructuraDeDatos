@@ -40,6 +40,7 @@ namespace ProyectoFinal
             lstPelis.ItemsSource = peliculas;
         }
 
+        //Botones para orgnizar
         private void btnOrdenar1_Click(object sender, RoutedEventArgs e)
         {
 
@@ -95,6 +96,8 @@ namespace ProyectoFinal
 
         }
 
+
+        //Otros botones
         private void btnNuevo_Click(object sender, RoutedEventArgs e)
         {
             btnNuevo.Visibility = Visibility.Hidden;
@@ -103,8 +106,93 @@ namespace ProyectoFinal
             btnAño.Visibility = Visibility.Hidden;
             btnAño2.Visibility = Visibility.Hidden;
             grdNuevo.Children.Add(new ParametrosNuevos());
+            btnGuardar.Visibility = Visibility.Visible;
+            btnCancelar.Visibility = Visibility.Visible;
+        }
+        private void btnGuardar_Click(object sender, RoutedEventArgs e)
+        {
+            grdNuevo.Children.Clear();
+            btnGuardar.Visibility = Visibility.Hidden;
+            btnCancelar.Visibility = Visibility.Hidden;
+            btnNuevo.Visibility = Visibility.Visible;
+            btnOrdenar1.Visibility = Visibility.Visible;
+            btnOrdenar2.Visibility = Visibility.Visible;
+            btnAño.Visibility = Visibility.Visible;
+            btnAño2.Visibility = Visibility.Visible;
+        }
+
+        private void btnCancelar_Click(object sender, RoutedEventArgs e)
+        {
+           
+            grdNuevo.Children.Clear();
+            btnGuardar.Visibility = Visibility.Hidden;
+            btnCancelar.Visibility = Visibility.Hidden;
+            btnNuevo.Visibility = Visibility.Visible;
+            btnOrdenar1.Visibility = Visibility.Visible;
+            btnOrdenar2.Visibility = Visibility.Visible;
+            btnAño.Visibility = Visibility.Visible;
+            btnAño2.Visibility = Visibility.Visible;
+        }
+        
+        //Visualizar elemento
+        private void lstPelis_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
+        {
+            if (lstPelis.SelectedIndex != -1)
+            {
+                grdNuevo.Children.Clear();
+                grdEditar.Children.Add(new VisualizarElemento());
+                btnEliminarElemento.Visibility = Visibility.Visible;
+                btnCancelar2.Visibility = Visibility.Visible;
+                btnEditar.Visibility = Visibility.Visible;
+                btnNuevo.Visibility = Visibility.Hidden;
+                btnOrdenar1.Visibility = Visibility.Hidden;
+                btnOrdenar2.Visibility = Visibility.Hidden;
+                btnAño.Visibility = Visibility.Hidden;
+                btnAño2.Visibility = Visibility.Hidden;
+                btnGuardar.Visibility = Visibility.Hidden;
+                btnCancelar.Visibility = Visibility.Hidden;
+
+            }
+        }
+
+        //Botones de Visualizar
+        private void btnEditar_Click(object sender, RoutedEventArgs e)
+        {
+            grdEditar.Children.Clear();
+            grdEditar.Children.Add(new EditarElemento());
+            grdNuevo.Children.Clear();
+
+        }
+
+        private void btnEliminarElemento_Click(object sender, RoutedEventArgs e)
+        {
+            grdEditar.Children.Clear();
+            btnEliminarElemento.Visibility = Visibility.Hidden;
+            btnCancelar2.Visibility = Visibility.Hidden;
+            btnEditar.Visibility = Visibility.Hidden;
+            btnNuevo.Visibility = Visibility.Visible;
+            btnOrdenar1.Visibility = Visibility.Visible;
+            btnOrdenar2.Visibility = Visibility.Visible;
+            btnAño.Visibility = Visibility.Visible;
+            btnAño2.Visibility = Visibility.Visible;
+        }
+
+        private void btnCancelar2_Click(object sender, RoutedEventArgs e)
+        {
+            grdEditar.Children.Clear();
+            grdNuevo.Children.Clear();
+            btnEliminarElemento.Visibility = Visibility.Hidden;
+            btnCancelar2.Visibility = Visibility.Hidden;
+            btnEditar.Visibility = Visibility.Hidden;
+            btnNuevo.Visibility = Visibility.Visible;
+            btnOrdenar1.Visibility = Visibility.Visible;
+            btnOrdenar2.Visibility = Visibility.Visible;
+            btnAño.Visibility = Visibility.Visible;
+            btnAño2.Visibility = Visibility.Visible;
         }
     }
+
+    
 }
 /*int gap, i;
             gap = miLista.Count / 2;
