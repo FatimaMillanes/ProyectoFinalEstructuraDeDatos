@@ -30,16 +30,16 @@ namespace ProyectoFinal
         {
             InitializeComponent();
 
-            Peliculas peliculas1 = new Peliculas("Pelicula","Suicide Squad", 2016, "Accion", "Fatima Millanes","Sinopsis",5);
-            Peliculas peliculas2 = (new Peliculas("Pelicula", "Wonder Woman", 2017, "Accion", "Director", "Sinopsis", 5));
-            Peliculas peliculas3 = (new Peliculas("Pelicula", "Batman vs Superman", 2016, "Accion", "Director", "Sinopsis", 5));
-            Peliculas peliculas4 = (new Peliculas("Pelicula", "The Dark Knight", 2008, "Accion", "Director", "Sinopsis", 5));
-            Peliculas peliculas5 = (new Peliculas("Pelicula", "Man of Steel", 2013, "Accion", "Director", "Sinopsis", 5));
-            Series series1 = (new Series("Serie", "Supergirl", 2015, "Accion", "Director", "Sinopsis", 5));
-            Series series2 = (new Series("Serie", "Flash", 2014, "Accion", "Director", "Sinopsis", 5));
-            Series series3 = (new Series("Serie", "Arrow", 2012, "Accion", "Director", "Sinopsis", 5));
-            Series series4 = (new Series("Serie", "Titans", 2018, "Accion", "Director", "Sinopsis", 5));
-            Series series5 = (new Series("Serie", "Legends of Tomorrow", 2016, "Accion", "Director", "Sinopsis", 5));
+            Peliculas peliculas1 = new Peliculas("Pelicula","Suicide Squad", 2016, "Accion", "David Ayer", "Los peores villanos de las cárceles y hospitales psiquiátricos, todos poseedores de cualidades especiales, son liberados por el gobierno para conformar un equipo de luchadores de élite y detener a una misteriosa y poderosa entidad.", 2);
+            Peliculas peliculas2 = (new Peliculas("Pelicula", "Wonder Woman", 2017, "Accion", "Patty Jenkins", "Cuando un piloto se estrella y habla de un conflicto en el mundo exterior, Diana, una guerrera amazónica en entrenamiento, abandona su hogar para luchar en una guerra, descubriendo sus plenos poderes y su verdadero destino.", 4));
+            Peliculas peliculas3 = (new Peliculas("Pelicula", "Batman vs Superman", 2016, "Accion", "Zack Snyder", "Temiendo que las acciones de Superman no se controlen, Batman se enfrenta al Hombre de Acero, mientras el mundo lucha con el tipo de héroe que realmente necesita.", 3));
+            Peliculas peliculas4 = (new Peliculas("Pelicula", "The Dark Knight", 2008, "Accion", "Christopher Nolan", "Cuando la amenaza conocida como el Joker causa estragos y caos en la gente de Gotham, Batman debe aceptar una de las mayores pruebas psicológicas y físicas de su capacidad para luchar contra la injusticia.", 5));
+            Peliculas peliculas5 = (new Peliculas("Pelicula", "Man of Steel", 2013, "Accion", "Zack Snyder", "Clark Kent es un extraterrestre que de niño fue evacuado de su mundo moribundo y vino a la Tierra, viviendo como un humano normal. Pero cuando los sobrevivientes de su hogar alienígena invaden la Tierra, debe revelarse al mundo.", 3));
+            Series series1 = (new Series("Serie", "Supergirl", 2015, "Accion", "Ali Adler", "Las aventuras de la prima de Superman en su propia carrera de superhéroes.", 2));
+            Series series2 = (new Series("Serie", "The Flash", 2014, "Accion", "Greg Berlanti", "Después de ser alcanzado por un rayo, Barry Allen se despierta de su coma y descubre que se le ha dado el poder de la súper velocidad, convirtiéndose en Flash, luchando contra el crimen en Central City.", 3));
+            Series series3 = (new Series("Serie", "Arrow", 2012, "Accion", "Greg Berlanti", "El playboy multimillonario Oliver Queen está desaparecido y se presume muerto cuando su yate se pierde en el mar. Regresa cinco años más tarde, un hombre cambiado, decidido a limpiar la ciudad como un vigilante encapuchado armado con un arco.", 4));
+            Series series4 = (new Series("Serie", "Titans", 2018, "Accion", "Greg Berlanti", "Un equipo de jóvenes superhéroes combate el mal y otros peligros.", 4));
+            Series series5 = (new Series("Serie", "Legends of Tomorrow", 2016, "Accion", "Greg Berlanti", "Rip Hunter, un viajero en el tiempo, tiene que reclutar un equipo de héroes y villanos para ayudar a prevenir un apocalipsis que podría afectar no solo a la Tierra, sino a todo el tiempo.", 3));
 
 
             Informacion.Add(peliculas1);

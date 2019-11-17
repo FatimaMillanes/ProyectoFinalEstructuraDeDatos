@@ -72,7 +72,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Grid x:Name="grdEditar" HorizontalAlignment="Left" Height="294" Margin="286,83,0,0" VerticalAlignment="Top" Width="498"/>
+        <Grid x:Name="grdEditar" HorizontalAlignment="Left" Height="324" Margin="286,53,0,0" VerticalAlignment="Top" Width="498"/>
         <Button x:Name="btnEditar" Visibility="Hidden" Content="Habilitar Edicion" HorizontalAlignment="Left" Margin="318,358,0,0" VerticalAlignment="Top" Width="131" BorderBrush="{x:Null}" Foreground="White" Click="btnEditar_Click" Height="25">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -97,10 +97,10 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <TextBox x:Name="txtTitulo" Visibility="Hidden" HorizontalAlignment="Left" Height="23" Margin="390,173,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="360" Background="#FFB9B9B9" Foreground="White"/>
-        <TextBox x:Name="txtAño" Visibility="Hidden" HorizontalAlignment="Left" Height="23" Margin="390,200,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="79" Background="#FFB9B9B9" Foreground="White"/>
-        <TextBlock x:Name="lblTitulo" HorizontalAlignment="Left" Visibility="Hidden" Margin="286,173,0,0" TextWrapping="Wrap" Text="TITULO" VerticalAlignment="Top" Foreground="White" FontFamily="Lucida Sans"/>
-        <TextBlock x:Name="lblAño" HorizontalAlignment="Left"  Visibility="Hidden" Margin="286,202,0,0" TextWrapping="Wrap" Text="AÑO" VerticalAlignment="Top" Foreground="White"/>
+        <TextBox x:Name="txtTitulo" Visibility="Hidden" HorizontalAlignment="Left" Height="23" Margin="390,143,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="360" Background="#FFB9B9B9" Foreground="White"/>
+        <TextBox x:Name="txtAño" Visibility="Hidden" HorizontalAlignment="Left" Height="23" Margin="390,170,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="79" Background="#FFB9B9B9" Foreground="White"/>
+        <TextBlock x:Name="lblTitulo" HorizontalAlignment="Left" Visibility="Hidden" Margin="286,143,0,0" TextWrapping="Wrap" Text="TITULO" VerticalAlignment="Top" Foreground="White" FontFamily="Lucida Sans"/>
+        <TextBlock x:Name="lblAño" HorizontalAlignment="Left"  Visibility="Hidden" Margin="286,171,0,0" TextWrapping="Wrap" Text="AÑO" VerticalAlignment="Top" Foreground="White"/>
 
     </Grid>
 </Window>
