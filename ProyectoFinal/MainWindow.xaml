@@ -97,17 +97,28 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Grid x:Name="grdStars" Visibility="Hidden" Margin="393,308,225.6,79">
-            <Image x:Name="star1" Margin="0,0,140,0" Source="Image.png" Stretch="Fill"/>
-            <Image x:Name="star2" Margin="35,0,105,0" Source="Image.png" Stretch="Fill"/>
-            <Image x:Name="star3" Margin="70,0" Source="Image.png" Stretch="Fill"/>
-            <Image x:Name="star4" Margin="105,0,35,0" Source="Image.png" Stretch="Fill"/>
-            <Image x:Name="star5" Margin="140,0,0,0" Source="Image.png" Stretch="Fill"/>
+        <StackPanel x:Name="spStars" Margin="389,315,209.6,70" Orientation="Horizontal">
+
+            <Image x:Name="star1" Visibility="Hidden" Margin="0,0,0,0.2" Source="Image.png" Stretch="Fill" Width="35"/>
+            <Image x:Name="star2" Visibility="Hidden" Margin="0,0,0,0.2" Source="Image.png" Stretch="Fill" Width="35"/>
+            <Image x:Name="star3" Visibility="Hidden" Margin="0,0,0,0.2" Source="Image.png" Stretch="Fill" Width="35"/>
+            <Image x:Name="star4" Visibility="Hidden" Margin="0,0,0,0.2" Source="Image.png" Stretch="Fill" Width="35"/>
+            <Image x:Name="star5" Visibility="Hidden" Margin="0,0,0,0.2" Source="Image.png" Stretch="Fill" Width="35"/>
 
 
 
 
-        </Grid>
+
+
+
+
+
+        </StackPanel>
+
+
+
+
+
 
 
 

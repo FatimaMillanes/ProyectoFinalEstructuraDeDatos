@@ -131,15 +131,15 @@ namespace ProyectoFinal
             grdEditar.Children.Add(new ParametrosNuevos());
             btnGuardar.Visibility = Visibility.Visible;
             btnCancelar.Visibility = Visibility.Visible;
-
             
-           /* txtTitulo.Visibility = Visibility.Visible;
-            txtAño.Visibility = Visibility.Visible;
-            lblTitulo.Visibility = Visibility.Visible;
-            lblAño.Visibility = Visibility.Visible;
+
+            /* txtTitulo.Visibility = Visibility.Visible;
+             txtAño.Visibility = Visibility.Visible;
+             lblTitulo.Visibility = Visibility.Visible;
+             lblAño.Visibility = Visibility.Visible;
 
 
-            */
+             */
 
 
         }
@@ -215,11 +215,12 @@ namespace ProyectoFinal
             btnOrdenar2.Visibility = Visibility.Visible;
             btnAño.Visibility = Visibility.Visible;
             btnAño2.Visibility = Visibility.Visible;
+        
 
-          /*  txtTitulo.Visibility = Visibility.Hidden;
-            txtAño.Visibility = Visibility.Hidden;
-            lblTitulo.Visibility = Visibility.Hidden;
-            lblAño.Visibility = Visibility.Hidden;*/
+            /*  txtTitulo.Visibility = Visibility.Hidden;
+              txtAño.Visibility = Visibility.Hidden;
+              lblTitulo.Visibility = Visibility.Hidden;
+              lblAño.Visibility = Visibility.Hidden;*/
         }
         
         //Visualizar elemento
@@ -227,7 +228,7 @@ namespace ProyectoFinal
         {
             if (lstPelis.SelectedIndex != -1)
             {
-                grdStars.Visibility = Visibility.Visible;
+              
                 grdEditar.Children.Clear();
                 grdEditar.Children.Add(new VisualizarElemento());
                 btnEliminarElemento.Visibility = Visibility.Visible;
@@ -255,6 +256,64 @@ namespace ProyectoFinal
                 ((VisualizarElemento)(grdEditar.Children[0])).txtSinopsis.Text = Informacion[lstPelis.SelectedIndex].Sinopsis;
                 ((VisualizarElemento)(grdEditar.Children[0])).txtRating.Text = Informacion[lstPelis.SelectedIndex].Rating.ToString();
 
+                if (((VisualizarElemento)(grdEditar.Children[0])).txtRating.Text=="0")
+                {
+                    spStars.Visibility = Visibility.Hidden;
+                    star1.Visibility = Visibility.Hidden;
+                    star2.Visibility = Visibility.Hidden;
+                    star3.Visibility = Visibility.Hidden;
+                    star4.Visibility = Visibility.Hidden;
+                    star5.Visibility = Visibility.Hidden;
+                }
+                if (((VisualizarElemento)(grdEditar.Children[0])).txtRating.Text == "1")
+                {
+                    spStars.Visibility = Visibility.Visible;
+
+                    star1.Visibility = Visibility.Visible;
+                    star2.Visibility = Visibility.Hidden;
+                    star3.Visibility = Visibility.Hidden;
+                    star4.Visibility = Visibility.Hidden;
+                    star5.Visibility = Visibility.Hidden;
+
+                }
+                if (((VisualizarElemento)(grdEditar.Children[0])).txtRating.Text == "2")
+                {
+
+                    spStars.Visibility = Visibility.Visible;
+                    star1.Visibility = Visibility.Visible;
+                    star2.Visibility = Visibility.Visible;
+                    star3.Visibility = Visibility.Hidden;
+                    star4.Visibility = Visibility.Hidden;
+                    star5.Visibility = Visibility.Hidden;
+                }
+                if (((VisualizarElemento)(grdEditar.Children[0])).txtRating.Text == "3")
+                {
+                    spStars.Visibility = Visibility.Visible;
+                    star1.Visibility = Visibility.Visible;
+                    star2.Visibility = Visibility.Visible;
+                    star3.Visibility = Visibility.Visible;
+                    star4.Visibility = Visibility.Hidden;
+                    star5.Visibility = Visibility.Hidden;
+                }
+                if (((VisualizarElemento)(grdEditar.Children[0])).txtRating.Text == "4")
+                {
+                    spStars.Visibility = Visibility.Visible;
+                    star1.Visibility = Visibility.Visible;
+                    star2.Visibility = Visibility.Visible;
+                    star3.Visibility = Visibility.Visible;
+                    star4.Visibility = Visibility.Visible;
+                    star5.Visibility = Visibility.Hidden;
+                }
+                if (((VisualizarElemento)(grdEditar.Children[0])).txtRating.Text == "5")
+                {
+                    spStars.Visibility = Visibility.Visible;
+                    star1.Visibility = Visibility.Visible;
+                    star2.Visibility = Visibility.Visible;
+                    star3.Visibility = Visibility.Visible;
+                    star4.Visibility = Visibility.Visible;
+                    star5.Visibility = Visibility.Visible;
+                }
+
 
             }
         }
@@ -264,7 +323,7 @@ namespace ProyectoFinal
         {
             grdEditar.Children.Clear();
             grdEditar.Children.Add(new EditarElemento());
-            
+            spStars.Visibility = Visibility.Hidden;
 
         }
 
@@ -279,6 +338,7 @@ namespace ProyectoFinal
             btnOrdenar2.Visibility = Visibility.Visible;
             btnAño.Visibility = Visibility.Visible;
             btnAño2.Visibility = Visibility.Visible;
+            spStars.Visibility = Visibility.Hidden;
 
             if (lstPelis.SelectedIndex != -1)
             {
@@ -297,6 +357,7 @@ namespace ProyectoFinal
             btnOrdenar2.Visibility = Visibility.Visible;
             btnAño.Visibility = Visibility.Visible;
             btnAño2.Visibility = Visibility.Visible;
+            spStars.Visibility = Visibility.Hidden;
         }
     }
 
