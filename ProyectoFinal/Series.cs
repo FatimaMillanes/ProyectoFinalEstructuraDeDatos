@@ -9,10 +9,15 @@ namespace ProyectoFinal
     class Series:Info
     {
      
-        public Series(string titulo, int año)
+        public Series(string tipo, string titulo, int año,string genero,string director, string sinopsis,int rating)
         {
+            this.Tipo = tipo;
             this.Titulo = titulo;
             this.Año = año;
+            this.Genero = genero;
+            this.Director = director;
+            this.Sinopsis = sinopsis;
+            this.Rating = rating;
         }
         public override string ToString()
         {

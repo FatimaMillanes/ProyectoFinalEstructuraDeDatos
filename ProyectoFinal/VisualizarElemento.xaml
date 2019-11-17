@@ -8,19 +8,19 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <TextBlock HorizontalAlignment="Left" Margin="5,85,0,0" TextWrapping="Wrap" Text="TITULO" VerticalAlignment="Top" Foreground="White" FontFamily="Lucida Sans"/>
-        <TextBox x:Name="txtTitulo" HorizontalAlignment="Left" Height="23" Margin="107,85,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="360" Background="#FFB9B9B9" Foreground="White" IsEnabled="False"/>
+        <TextBox x:Name="txtTitulo" HorizontalAlignment="Left" Height="23" Margin="107,85,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="360" Foreground="Gray" IsEnabled="False" Background="White" FontWeight="Bold" FontFamily="Lucida Sans" FontSize="14"/>
         <TextBlock HorizontalAlignment="Left" Margin="5,114,0,0" TextWrapping="Wrap" Text="AÑO" VerticalAlignment="Top" Foreground="White" FontFamily="Lucida Sans"/>
-        <TextBox x:Name="txtAño" HorizontalAlignment="Left" Height="23" Margin="107,113,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="79" Background="#FFB9B9B9" Foreground="White" IsEnabled="False"/>
+        <TextBox x:Name="txtAño" HorizontalAlignment="Left" Height="23" Margin="107,113,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="79" Background="White" Foreground="Gray" IsEnabled="False" FontSize="14" FontFamily="Lucida Sans" FontWeight="Bold"/>
         <TextBlock HorizontalAlignment="Left" Margin="261,114,0,0" TextWrapping="Wrap" Text="GENERO" VerticalAlignment="Top" Foreground="White" FontFamily="Lucida Sans"/>
-        <TextBox x:Name="txtGenero" HorizontalAlignment="Left" Height="23" Margin="348,113,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="119" Background="#FFB9B9B9" Foreground="White" IsEnabled="False"/>
+        <TextBox x:Name="txtGenero" HorizontalAlignment="Left" Height="23" Margin="348,113,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="119" Background="White" Foreground="Gray" IsEnabled="False" FontWeight="Bold" FontFamily="Lucida Sans" FontSize="14"/>
         <TextBlock HorizontalAlignment="Left" Margin="5,204,0,0" TextWrapping="Wrap" Text="RATING" VerticalAlignment="Top" Foreground="White" FontFamily="Lucida Sans"/>
         <TextBlock x:Name="txtTitulo1" HorizontalAlignment="Left" TextWrapping="Wrap" Text="VISUALIZAR ELEMENTO" VerticalAlignment="Top" Height="26" Width="305" Foreground="#FF8C8C8C" FontSize="18" FontFamily="Segoe UI Black"/>
         <TextBlock HorizontalAlignment="Left" Margin="5,41,0,0" TextWrapping="Wrap" Text="TIPO:" VerticalAlignment="Top" Foreground="White" FontFamily="Lucida Sans"/>
-        <TextBox x:Name="txtProduccion" HorizontalAlignment="Left" Height="23" Margin="107,139,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="360" Background="#FFB9B9B9" Foreground="White" IsEnabled="False"/>
+        <TextBox x:Name="txtDirector" HorizontalAlignment="Left" Height="23" Margin="107,139,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="360" Background="White" Foreground="Gray" IsEnabled="False" FontFamily="Lucida Sans" FontWeight="Bold" FontSize="14"/>
         <TextBlock HorizontalAlignment="Left" Margin="4,168,0,0" TextWrapping="Wrap" Text="SINOPSIS" VerticalAlignment="Top" Foreground="White"/>
-        <TextBox x:Name="txtDescripcion" HorizontalAlignment="Left" Height="23" Margin="107,168,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="360" Background="#FFB9B9B9" Foreground="White" IsEnabled="False"/>
+        <TextBox x:Name="txtSinopsis" HorizontalAlignment="Left" Height="23" Margin="107,168,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="360" Background="White" Foreground="Gray" IsEnabled="False" FontFamily="Lucida Sans" FontSize="14" FontWeight="Bold"/>
         <TextBlock HorizontalAlignment="Left" Margin="4,139,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White" Text="DIRECTOR" FontFamily="Lucida Sans"/>
-        <TextBox x:Name="txtTipo" HorizontalAlignment="Left" Height="23" Margin="107,41,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="79" Background="#FFB9B9B9" Foreground="White" IsEnabled="False"/>
+        <TextBox x:Name="txtTipo" HorizontalAlignment="Left" Height="23" Margin="107,41,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="79" Background="White" Foreground="Gray" IsEnabled="False" FontWeight="Bold" FontFamily="Lucida Sans" FontSize="14"/>
         <Image x:Name="star2" HorizontalAlignment="Left" Height="43" Margin="155,196,0,0" VerticalAlignment="Top" Width="43" Source="images/estrella1.png"/>
         <Image x:Name="star3" HorizontalAlignment="Left" Height="43" Margin="203,196,0,0" VerticalAlignment="Top" Width="43" Source="images/estrella1.png"/>
         <Image x:Name="star4" HorizontalAlignment="Left" Height="43" Margin="251,196,0,0" VerticalAlignment="Top" Width="43" Source="images/estrella2.png"/>

@@ -7,9 +7,9 @@
         mc:Ignorable="d"
         Title="PELICULAS &amp; SERIES" Height="450" Width="800">
     <Grid Background="#FF3F335F">
-        <ListView x:Name="lstPelis" HorizontalAlignment="Left" Height="286" Margin="19,49,0,0" VerticalAlignment="Top" Width="251" Background="#FF5E467F" BorderBrush="{x:Null}" FontFamily="Lucida Sans" Foreground="#FF858585" FontSize="14" SelectionChanged="lstPelis_SelectionChanged_1">
+        <ListView x:Name="lstPelis" HorizontalAlignment="Left" Height="286" Margin="19,49,0,0" VerticalAlignment="Top" Width="251" Background="#FF5E467F" BorderBrush="{x:Null}" FontFamily="Lucida Sans" Foreground="#FFBFBFBF" FontSize="14" SelectionChanged="lstPelis_SelectionChanged_1">
             <ListView.View>
-                <GridView>
+                <GridView >
                     <GridViewColumn DisplayMemberBinding="{Binding Titulo}" Header="Titulo"></GridViewColumn>
                     <GridViewColumn DisplayMemberBinding="{Binding Año}" Header="Año"></GridViewColumn>
                 </GridView>

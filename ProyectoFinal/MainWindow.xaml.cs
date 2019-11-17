@@ -30,16 +30,16 @@ namespace ProyectoFinal
         {
             InitializeComponent();
 
-            Peliculas peliculas1 = new Peliculas("Suicide Squad", 2016);
-            Peliculas peliculas2 = (new Peliculas("Wonder Woman", 2017));
-            Peliculas peliculas3 = (new Peliculas("Batman vs Superman", 2016));
-            Peliculas peliculas4 = (new Peliculas("The Dark Knight", 2008));
-            Peliculas peliculas5 = (new Peliculas("Man of Steel", 2013));
-            Series series1 = (new Series("Supergirl", 2015));
-            Series series2 = (new Series("Flash", 2014));
-            Series series3 = (new Series("Arrow", 2012));
-            Series series4 = (new Series("Titans", 2018));
-            Series series5 = (new Series("Legends of Tomorrow", 2016));
+            Peliculas peliculas1 = new Peliculas("Pelicula","Suicide Squad", 2016, "Accion", "Fatima Millanes","Sinopsis",5);
+            Peliculas peliculas2 = (new Peliculas("Pelicula", "Wonder Woman", 2017, "Accion", "Director", "Sinopsis", 5));
+            Peliculas peliculas3 = (new Peliculas("Pelicula", "Batman vs Superman", 2016, "Accion", "Director", "Sinopsis", 5));
+            Peliculas peliculas4 = (new Peliculas("Pelicula", "The Dark Knight", 2008, "Accion", "Director", "Sinopsis", 5));
+            Peliculas peliculas5 = (new Peliculas("Pelicula", "Man of Steel", 2013, "Accion", "Director", "Sinopsis", 5));
+            Series series1 = (new Series("Serie", "Supergirl", 2015, "Accion", "Director", "Sinopsis", 5));
+            Series series2 = (new Series("Serie", "Flash", 2014, "Accion", "Director", "Sinopsis", 5));
+            Series series3 = (new Series("Serie", "Arrow", 2012, "Accion", "Director", "Sinopsis", 5));
+            Series series4 = (new Series("Serie", "Titans", 2018, "Accion", "Director", "Sinopsis", 5));
+            Series series5 = (new Series("Serie", "Legends of Tomorrow", 2016, "Accion", "Director", "Sinopsis", 5));
 
 
             Informacion.Add(peliculas1);
@@ -155,15 +155,16 @@ namespace ProyectoFinal
             if (((ParametrosNuevos)(grdEditar.Children[0])).rbPelicula.IsChecked == true && 
                 ((ParametrosNuevos)(grdEditar.Children[0])).rbSerie.IsChecked == false)
             {
-                Informacion.Add(new Peliculas(txtTitulo.Text, Int32.Parse(txtAño.Text)));
+                Informacion.Add(new Peliculas("Pelicula", txtTitulo.Text, Int32.Parse(txtAño.Text), "", "", "",0)) ;
                 txtTitulo.Text = "";
                 txtAño.Text = "";
+               
             }
 
             if (((ParametrosNuevos)(grdEditar.Children[0])).rbPelicula.IsChecked == false &&
                 ((ParametrosNuevos)(grdEditar.Children[0])).rbSerie.IsChecked == true)
             {
-                Informacion.Add(new Peliculas(txtTitulo.Text, Int32.Parse(txtAño.Text)));
+                Informacion.Add(new Series("Serie", txtTitulo.Text, Int32.Parse(txtAño.Text), "", "", "", 0));
                 txtTitulo.Text = "";
                 txtAño.Text = "";
             }
@@ -213,6 +214,20 @@ namespace ProyectoFinal
                 btnGuardar.Visibility = Visibility.Hidden;
                 btnCancelar.Visibility = Visibility.Hidden;
 
+                txtTitulo.Visibility = Visibility.Hidden;
+                txtAño.Visibility = Visibility.Hidden;
+                lblTitulo.Visibility = Visibility.Hidden;
+                lblAño.Visibility = Visibility.Hidden;
+
+
+                ((VisualizarElemento)(grdEditar.Children[0])).txtTipo.Text = Informacion[lstPelis.SelectedIndex].Tipo;
+                ((VisualizarElemento)(grdEditar.Children[0])).txtTitulo.Text = Informacion[lstPelis.SelectedIndex].Titulo;
+                ((VisualizarElemento)(grdEditar.Children[0])).txtAño.Text = Informacion[lstPelis.SelectedIndex].Año.ToString();
+                ((VisualizarElemento)(grdEditar.Children[0])).txtGenero.Text = Informacion[lstPelis.SelectedIndex].Genero;
+                ((VisualizarElemento)(grdEditar.Children[0])).txtDirector.Text = Informacion[lstPelis.SelectedIndex].Director;
+                ((VisualizarElemento)(grdEditar.Children[0])).txtSinopsis.Text = Informacion[lstPelis.SelectedIndex].Sinopsis;
+                
+
             }
         }
 
@@ -236,6 +251,11 @@ namespace ProyectoFinal
             btnOrdenar2.Visibility = Visibility.Visible;
             btnAño.Visibility = Visibility.Visible;
             btnAño2.Visibility = Visibility.Visible;
+
+            if (lstPelis.SelectedIndex != -1)
+            {
+                Informacion.RemoveAt(lstPelis.SelectedIndex);
+            }
         }
 
         private void btnCancelar2_Click(object sender, RoutedEventArgs e)

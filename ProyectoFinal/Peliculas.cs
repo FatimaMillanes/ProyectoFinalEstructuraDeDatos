@@ -10,10 +10,15 @@ namespace ProyectoFinal
     {
         
        
-        public Peliculas(string titulo, int año)
+        public Peliculas(string tipo, string titulo, int año, string genero, string director, string sinopsis, int rating)
         {
+            this.Tipo = tipo;
             this.Titulo = titulo;
             this.Año = año;
+            this.Genero = genero;
+            this.Director = director;
+            this.Sinopsis = sinopsis;
+            this.Rating = rating;
         }
         public override string ToString()
         {

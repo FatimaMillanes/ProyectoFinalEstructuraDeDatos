@@ -16,6 +16,16 @@
                     <GradientStop Color="#FFB9B9B9" Offset="1"/>
                 </LinearGradientBrush>
             </ComboBox.Background>
+            <ComboBoxItem Background="#FFB9B9B9" BorderBrush="{x:Null}" Content="1"/>
+            <ComboBoxItem Background="#FFB9B9B9" BorderBrush="{x:Null}" Content="2"/>
+            <ComboBoxItem Background="#FFB9B9B9" BorderBrush="{x:Null}" Content="3"/>
+            <ComboBoxItem Background="#FFB9B9B9" BorderBrush="{x:Null}" Content="4"/>
+            <ComboBoxItem Background="#FFB9B9B9" BorderBrush="{x:Null}" Content="5"/>
+            <ComboBoxItem Background="#FFB9B9B9" BorderBrush="{x:Null}" Content="6"/>
+            <ComboBoxItem Background="#FFB9B9B9" BorderBrush="{x:Null}" Content="7"/>
+            <ComboBoxItem Background="#FFB9B9B9" BorderBrush="{x:Null}" Content="8"/>
+            <ComboBoxItem Background="#FFB9B9B9" BorderBrush="{x:Null}" Content="9"/>
+            <ComboBoxItem Background="#FFB9B9B9" BorderBrush="{x:Null}" Content="10"/>
         </ComboBox>
         <TextBlock HorizontalAlignment="Left" Margin="258,62,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
         <TextBox x:Name="txtProduccion" HorizontalAlignment="Left" Height="23" Margin="345,56,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="119" Background="#FFB9B9B9" Foreground="White"/>
