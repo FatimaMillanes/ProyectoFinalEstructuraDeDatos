@@ -130,6 +130,14 @@
             <Image Margin="0,0,0,0.2" Source="estrella2.png" Stretch="Fill" Width="35"/>
             <Image Margin="0,0,0,0.2" Source="estrella2.png" Stretch="Fill" Width="35"/>
         </StackPanel>
+        <Button x:Name="btnGuardar2" Visibility="Hidden" Content="Guardar" HorizontalAlignment="Left" Margin="472,359,0,0" VerticalAlignment="Top" Width="131" BorderBrush="{x:Null}" Foreground="White" Height="25" Click="btnGuardar2_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF5C3CC2" Offset="1"/>
+                    <GradientStop Color="#FF8579AB"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
 
 
 

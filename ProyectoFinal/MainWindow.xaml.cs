@@ -329,7 +329,19 @@ namespace ProyectoFinal
             grdEditar.Children.Add(new EditarElemento());
             spStars.Visibility = Visibility.Hidden;
             spStars2.Visibility = Visibility.Hidden;
+            btnGuardar2.Visibility = Visibility.Visible;
+            btnEditar.Visibility = Visibility.Hidden;
+            btnEliminarElemento.Visibility = Visibility.Hidden;
 
+            ((EditarElemento)(grdEditar.Children[0])).txtTipo.Text = Informacion[lstPelis.SelectedIndex].Tipo;
+            ((EditarElemento)(grdEditar.Children[0])).txtTitulo.Text = Informacion[lstPelis.SelectedIndex].Titulo;
+            ((EditarElemento)(grdEditar.Children[0])).txtAño.Text = Informacion[lstPelis.SelectedIndex].Año.ToString();
+            ((EditarElemento)(grdEditar.Children[0])).txtGenero.Text = Informacion[lstPelis.SelectedIndex].Genero;
+            ((EditarElemento)(grdEditar.Children[0])).txtProduccion.Text = Informacion[lstPelis.SelectedIndex].Director;
+            ((EditarElemento)(grdEditar.Children[0])).txtDescripcion.Text = Informacion[lstPelis.SelectedIndex].Sinopsis;
+            ((EditarElemento)(grdEditar.Children[0])).cbRat.SelectedIndex = Informacion[lstPelis.SelectedIndex].Rating;
+
+            
         }
 
         private void btnEliminarElemento_Click(object sender, RoutedEventArgs e)
@@ -365,6 +377,37 @@ namespace ProyectoFinal
             btnAño2.Visibility = Visibility.Visible;
             spStars.Visibility = Visibility.Hidden;
             spStars2.Visibility = Visibility.Hidden;
+            btnGuardar2.Visibility = Visibility.Hidden;
+        }
+
+        private void btnGuardar2_Click(object sender, RoutedEventArgs e)
+        {
+            if (lstPelis.SelectedIndex != -1)
+            {
+
+
+                Informacion[lstPelis.SelectedIndex].Tipo = ((EditarElemento)(grdEditar.Children[0])).txtTipo.Text;
+                Informacion[lstPelis.SelectedIndex].Titulo = ((EditarElemento)(grdEditar.Children[0])).txtTitulo.Text;
+                Informacion[lstPelis.SelectedIndex].Año = Int32.Parse(((EditarElemento)(grdEditar.Children[0])).txtAño.Text);
+                Informacion[lstPelis.SelectedIndex].Genero = ((EditarElemento)(grdEditar.Children[0])).txtGenero.Text;
+                Informacion[lstPelis.SelectedIndex].Director = ((EditarElemento)(grdEditar.Children[0])).txtProduccion.Text;
+                Informacion[lstPelis.SelectedIndex].Sinopsis = ((EditarElemento)(grdEditar.Children[0])).txtDescripcion.Text;
+                Informacion[lstPelis.SelectedIndex].Rating = ((EditarElemento)(grdEditar.Children[0])).cbRat.SelectedIndex;
+            }lstPelis.Items.Refresh();
+
+            grdEditar.Children.Clear();
+            btnEliminarElemento.Visibility = Visibility.Hidden;
+            btnCancelar2.Visibility = Visibility.Hidden;
+            btnEditar.Visibility = Visibility.Hidden;
+            btnNuevo.Visibility = Visibility.Visible;
+            btnOrdenar1.Visibility = Visibility.Visible;
+            btnOrdenar2.Visibility = Visibility.Visible;
+            btnAño.Visibility = Visibility.Visible;
+            btnAño2.Visibility = Visibility.Visible;
+            spStars.Visibility = Visibility.Hidden;
+            spStars2.Visibility = Visibility.Hidden;
+            btnGuardar2.Visibility = Visibility.Hidden;
+
         }
     }
 
