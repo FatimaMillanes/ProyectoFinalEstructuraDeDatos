@@ -6,12 +6,10 @@ using System.Threading.Tasks;
 
 namespace ProyectoFinal
 {
-    class Series
+    class Series:Info
     {
-        public string Titulo { get; set; }
-        public float Año { get; set; }
-
-        public Series(string titulo, float año)
+     
+        public Series(string titulo, int año)
         {
             this.Titulo = titulo;
             this.Año = año;

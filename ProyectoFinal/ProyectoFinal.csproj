@@ -58,6 +58,7 @@
     <Compile Include="EditarElemento.xaml.cs">
       <DependentUpon>EditarElemento.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Info.cs" />
     <Compile Include="ParametrosNuevos.xaml.cs">
       <DependentUpon>ParametrosNuevos.xaml</DependentUpon>
     </Compile>
@@ -100,7 +101,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="VisualizarElemento.xaml">
-      <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
@@ -130,6 +130,28 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="estrella1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="estrellas.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="estrella11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="estrella12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="estrella2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="estrella21.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

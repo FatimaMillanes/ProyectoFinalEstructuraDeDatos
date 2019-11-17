@@ -13,8 +13,7 @@
 
         <RadioButton x:Name="rbPelicula" Content="PELICULA" HorizontalAlignment="Left" Margin="68,38,0,0" VerticalAlignment="Top" Foreground="White" Checked="RadioButton_Checked"/>
         <RadioButton x:Name="rbSerie" Content="SERIE" HorizontalAlignment="Left" Margin="169,38,0,0" VerticalAlignment="Top" Foreground="White" Background="White" BorderBrush="White" Checked="rbSerie_Checked"/>
-        <Grid x:Name="grdPelis" HorizontalAlignment="Left" Height="226" Margin="0,59,0,0" VerticalAlignment="Top" Width="800"/>
-        <Grid x:Name="grdSeries" HorizontalAlignment="Left" Height="226" Margin="0,59,0,0" VerticalAlignment="Top" Width="800"/>
+        <Grid x:Name="grdNuevo" HorizontalAlignment="Left" Height="226" Margin="0,59,0,0" VerticalAlignment="Top" Width="800"/>
 
     </Grid>
 </UserControl>

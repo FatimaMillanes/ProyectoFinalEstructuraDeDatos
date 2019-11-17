@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 
 namespace ProyectoFinal
 {
@@ -21,79 +22,99 @@ namespace ProyectoFinal
     /// </summary>
     public partial class MainWindow : Window
     {
-        ObservableCollection<int> miLista = new ObservableCollection<int>();
+        //ObservableCollection<int> miLista = new ObservableCollection<int>();
+        ObservableCollection<Info> Informacion = new ObservableCollection<Info>();
         ObservableCollection<Peliculas> peliculas = new ObservableCollection<Peliculas>();
+        ObservableCollection<Series> series = new ObservableCollection<Series>();
         public MainWindow()
         {
             InitializeComponent();
 
-            peliculas.Add(new Peliculas("titulo1", 1999));
-            peliculas.Add(new Peliculas("titulo3", 1998));
-            peliculas.Add(new Peliculas("titulo2", 1955));
-            peliculas.Add(new Peliculas("titulo8", 1945));
-            peliculas.Add(new Peliculas("titulo5", 1985));
-            peliculas.Add(new Peliculas("titulo6", 1927));
-            peliculas.Add(new Peliculas("titulo7", 1959));
-            peliculas.Add(new Peliculas("titulo4", 1939));
-            peliculas.Add(new Peliculas("titulo9", 1949));
-            peliculas.Add(new Peliculas("titulo10", 1899));
-            lstPelis.ItemsSource = peliculas;
+            Peliculas peliculas1 = new Peliculas("Aquaman", 2018);
+            Peliculas peliculas2 = (new Peliculas("Wonder Woman", 2017));
+            Peliculas peliculas3 = (new Peliculas("Batman vs Superman", 2016));
+            Peliculas peliculas4 = (new Peliculas("The Dark Knight", 2008));
+            Peliculas peliculas5 = (new Peliculas("Man of Steel", 2013));
+            Series series1 = (new Series("Supergirl", 2015));
+            Series series2 = (new Series("Flash", 2014));
+            Series series3 = (new Series("Arrow", 2012));
+            Series series4 = (new Series("Gotham", 2014));
+            Series series5 = (new Series("Legends of Tomorrow", 2016));
+
+
+            Informacion.Add(peliculas1);
+            Informacion.Add(peliculas2);
+            Informacion.Add(peliculas3);
+            Informacion.Add(peliculas4);
+            Informacion.Add(peliculas5);
+            Informacion.Add(series1);
+            Informacion.Add(series2);
+            Informacion.Add(series3);
+            Informacion.Add(series4);
+            Informacion.Add(series5);
+
+
+            lstPelis.ItemsSource = Informacion;
+            
+
+
         }
 
         //Botones para orgnizar
-        private void btnOrdenar1_Click(object sender, RoutedEventArgs e)
+        private void btnOrdenar1_Click(object sender, RoutedEventArgs e) //Alfabeticamente Ascendente
         {
-
-
-
+            lstPelis.Items.SortDescriptions.Clear();
+            CollectionView view = (CollectionView)CollectionViewSource.GetDefaultView(lstPelis.ItemsSource);
+            view.SortDescriptions.Add(new SortDescription("Titulo", ListSortDirection.Ascending));
 
         }
 
-        private void btnOrdenar2_Click(object sender, RoutedEventArgs e)
+        private void btnOrdenar2_Click(object sender, RoutedEventArgs e) //Alfabeficamente Descendente
         {
-
-           
-
+            lstPelis.Items.SortDescriptions.Clear();
+            CollectionView view = (CollectionView)CollectionViewSource.GetDefaultView(lstPelis.ItemsSource);
+            view.SortDescriptions.Add(new SortDescription("Titulo", ListSortDirection.Descending));
 
         }
 
-        private void btnAño_Click(object sender, RoutedEventArgs e)
+        private void btnAño_Click(object sender, RoutedEventArgs e) //Años Ascendente
         {
+            lstPelis.Items.SortDescriptions.Clear();
             bool intercambio = false;
             do
             {
                 intercambio = false;
-                for (int i = 0; i < peliculas.Count - 1; i++)
+                for (int i = 0; i < Informacion.Count - 1; i++)
                 {
-                    if (peliculas[i].Año > peliculas[i + 1].Año)
+                    if (Informacion[i].Año > Informacion[i + 1].Año)
                     {
-                        var temp = peliculas[i];
-                        peliculas[i] = peliculas[i + 1];
-                        peliculas[i + 1] = temp;
+                        var temp = Informacion[i];
+                        Informacion[i] = Informacion[i + 1];
+                        Informacion[i + 1] = temp;
                         intercambio = true;
                     }
                 }
             } while (intercambio);
         }
 
-        private void btnAño2_Click(object sender, RoutedEventArgs e)
+        private void btnAño2_Click(object sender, RoutedEventArgs e) //Años Descendente
         {
+            lstPelis.Items.SortDescriptions.Clear();
             bool intercambio = false;
             do
             {
                 intercambio = false;
-                for (int i = 0; i < peliculas.Count - 1; i++)
+                for (int i = 0; i < Informacion.Count - 1; i++)
                 {
-                    if (peliculas[i].Año > peliculas[i + 1].Año)
+                    if (Informacion[i].Año < Informacion[i + 1].Año)
                     {
-                        var temp = peliculas[i];
-                        peliculas[i] = peliculas[i + 1];
-                        peliculas[i + 1] = temp;
+                        var temp = Informacion[i];
+                        Informacion[i] = Informacion[i + 1];
+                        Informacion[i + 1] = temp;
                         intercambio = true;
                     }
                 }
             } while (intercambio);
-
         }
 
 
@@ -105,13 +126,13 @@ namespace ProyectoFinal
             btnOrdenar2.Visibility = Visibility.Hidden;
             btnAño.Visibility = Visibility.Hidden;
             btnAño2.Visibility = Visibility.Hidden;
-            grdNuevo.Children.Add(new ParametrosNuevos());
+            grdEditar.Children.Add(new ParametrosNuevos());
             btnGuardar.Visibility = Visibility.Visible;
             btnCancelar.Visibility = Visibility.Visible;
         }
         private void btnGuardar_Click(object sender, RoutedEventArgs e)
         {
-            grdNuevo.Children.Clear();
+            grdEditar.Children.Clear();
             btnGuardar.Visibility = Visibility.Hidden;
             btnCancelar.Visibility = Visibility.Hidden;
             btnNuevo.Visibility = Visibility.Visible;
@@ -124,7 +145,7 @@ namespace ProyectoFinal
         private void btnCancelar_Click(object sender, RoutedEventArgs e)
         {
            
-            grdNuevo.Children.Clear();
+            grdEditar.Children.Clear();
             btnGuardar.Visibility = Visibility.Hidden;
             btnCancelar.Visibility = Visibility.Hidden;
             btnNuevo.Visibility = Visibility.Visible;
@@ -139,7 +160,8 @@ namespace ProyectoFinal
         {
             if (lstPelis.SelectedIndex != -1)
             {
-                grdNuevo.Children.Clear();
+                
+                grdEditar.Children.Clear();
                 grdEditar.Children.Add(new VisualizarElemento());
                 btnEliminarElemento.Visibility = Visibility.Visible;
                 btnCancelar2.Visibility = Visibility.Visible;
@@ -160,7 +182,7 @@ namespace ProyectoFinal
         {
             grdEditar.Children.Clear();
             grdEditar.Children.Add(new EditarElemento());
-            grdNuevo.Children.Clear();
+            
 
         }
 
@@ -180,7 +202,6 @@ namespace ProyectoFinal
         private void btnCancelar2_Click(object sender, RoutedEventArgs e)
         {
             grdEditar.Children.Clear();
-            grdNuevo.Children.Clear();
             btnEliminarElemento.Visibility = Visibility.Hidden;
             btnCancelar2.Visibility = Visibility.Hidden;
             btnEditar.Visibility = Visibility.Hidden;
@@ -194,6 +215,10 @@ namespace ProyectoFinal
 
     
 }
+
+
+
+
 /*int gap, i;
             gap = miLista.Count / 2;
             while (gap > 0)

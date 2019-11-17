@@ -6,17 +6,21 @@
              xmlns:local="clr-namespace:ProyectoFinal"
              mc:Ignorable="d" d:DesignWidth="800" Height="170">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="17*"/>
+            <ColumnDefinition Width="183*"/>
+        </Grid.ColumnDefinitions>
         <TextBlock HorizontalAlignment="Left" Margin="1,3,0,0" TextWrapping="Wrap" Text="TITULO" VerticalAlignment="Top" Foreground="White" FontFamily="Lucida Sans"/>
-        <TextBox x:Name="txtTitulo" HorizontalAlignment="Left" Height="23" Margin="103,3,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="360" Background="#FFB9B9B9" Foreground="White"/>
+        <TextBox x:Name="txtTitulo" HorizontalAlignment="Left" Height="23" Margin="35,3,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="360" Background="#FFB9B9B9" Foreground="White" Grid.Column="1"/>
         <TextBlock HorizontalAlignment="Left" Margin="1,32,0,0" TextWrapping="Wrap" Text="AÑO" VerticalAlignment="Top" Foreground="White"/>
-        <TextBox x:Name="txtAño" HorizontalAlignment="Left" Height="23" Margin="103,31,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="79" Background="#FFB9B9B9" Foreground="White"/>
-        <TextBlock HorizontalAlignment="Left" Margin="257,32,0,0" TextWrapping="Wrap" Text="GENERO" VerticalAlignment="Top" Foreground="White" FontFamily="Lucida Sans"/>
-        <TextBox x:Name="txtGenero" HorizontalAlignment="Left" Height="23" Margin="344,31,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="119" Background="#FFB9B9B9" Foreground="White"/>
-        <TextBox x:Name="txtProduccion" HorizontalAlignment="Left" Height="23" Margin="103,58,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="360" Background="#FFB9B9B9" Foreground="White"/>
+        <TextBox x:Name="txtAño" HorizontalAlignment="Left" Height="23" Margin="35,30,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="79" Background="#FFB9B9B9" Foreground="White" Grid.Column="1"/>
+        <TextBlock HorizontalAlignment="Left" Margin="189,32,0,0" TextWrapping="Wrap" Text="GENERO" VerticalAlignment="Top" Foreground="White" FontFamily="Lucida Sans" Grid.Column="1"/>
+        <TextBox x:Name="txtGenero" HorizontalAlignment="Left" Height="23" Margin="276,31,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="119" Background="#FFB9B9B9" Foreground="White" Grid.Column="1"/>
+        <TextBox x:Name="txtProduccion" HorizontalAlignment="Left" Height="23" Margin="35,58,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="360" Background="#FFB9B9B9" Foreground="White" Grid.Column="1"/>
         <TextBlock HorizontalAlignment="Left" Margin="0,87,0,0" TextWrapping="Wrap" Text="SINOPSIS" VerticalAlignment="Top" Foreground="White"/>
-        <TextBox x:Name="txtDescripcion" HorizontalAlignment="Left" Height="23" Margin="103,87,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="360" Background="#FFB9B9B9" Foreground="White"/>
+        <TextBox x:Name="txtDescripcion" HorizontalAlignment="Left" Height="23" Margin="35,87,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="360" Background="#FFB9B9B9" Foreground="White" Grid.Column="1"/>
         <TextBlock HorizontalAlignment="Left" Margin="1,115,0,0" TextWrapping="Wrap" Text="RATING" VerticalAlignment="Top" Foreground="White"/>
-        <ComboBox x:Name="cbRat" HorizontalAlignment="Left" Margin="103,115,0,0" VerticalAlignment="Top" Width="36" Foreground="Black" BorderBrush="{x:Null}">
+        <ComboBox x:Name="cbRat" HorizontalAlignment="Left" Margin="35,115,0,0" VerticalAlignment="Top" Width="36" Foreground="Black" BorderBrush="{x:Null}" Grid.Column="1">
             <ComboBoxItem Background="#FFB9B9B9" BorderBrush="{x:Null}">0</ComboBoxItem>
             <ComboBoxItem Background="#FFB9B9B9" BorderBrush="{x:Null}">1</ComboBoxItem>
             <ComboBoxItem Background="#FFB9B9B9" BorderBrush="{x:Null}">2</ComboBoxItem>

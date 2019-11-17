@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace ProyectoFinal
 {
-    class Peliculas
+    class Peliculas:Info
     {
-        public string Titulo { get; set; }
-        public float Año { get; set; }
         
-        public Peliculas(string titulo, float año)
+       
+        public Peliculas(string titulo, int año)
         {
             this.Titulo = titulo;
             this.Año = año;
@@ -20,5 +19,6 @@ namespace ProyectoFinal
         {
             return this.Titulo + "" + "(" + this.Año.ToString() + ")";
         }
+
     }
 }

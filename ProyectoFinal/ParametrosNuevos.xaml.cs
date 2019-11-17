@@ -31,12 +31,9 @@ namespace ProyectoFinal
        private void RadioButton_Checked(object sender, RoutedEventArgs e)
          {
              if (rbPelicula.IsChecked == true) {
-                 grdPelis.Children.Add(new ParametrosPeliculas());
-                grdSeries.Children.Clear();
-               
+                grdNuevo.Children.Clear();
+                grdNuevo.Children.Add(new ParametrosPeliculas());
             }
-
-
 
          }
 
@@ -44,9 +41,9 @@ namespace ProyectoFinal
          {
              if (rbSerie.IsChecked == true)
              {
-                 grdSeries.Children.Add(new ParametrosSeries());
-                grdPelis.Children.Clear();
-               
+                grdNuevo.Children.Clear();
+                grdNuevo.Children.Add(new ParametrosSeries());
+
             }
          }
 
