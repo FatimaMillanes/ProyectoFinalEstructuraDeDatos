@@ -26,6 +26,8 @@ namespace ProyectoFinal
         ObservableCollection<Info> Informacion = new ObservableCollection<Info>();
         ObservableCollection<Peliculas> peliculas = new ObservableCollection<Peliculas>();
         ObservableCollection<Series> series = new ObservableCollection<Series>();
+        private object txtAño;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -131,13 +133,13 @@ namespace ProyectoFinal
             btnCancelar.Visibility = Visibility.Visible;
 
             
-            txtTitulo.Visibility = Visibility.Visible;
+           /* txtTitulo.Visibility = Visibility.Visible;
             txtAño.Visibility = Visibility.Visible;
             lblTitulo.Visibility = Visibility.Visible;
             lblAño.Visibility = Visibility.Visible;
 
 
-
+            */
 
 
         }
@@ -155,25 +157,50 @@ namespace ProyectoFinal
             if (((ParametrosNuevos)(grdEditar.Children[0])).rbPelicula.IsChecked == true && 
                 ((ParametrosNuevos)(grdEditar.Children[0])).rbSerie.IsChecked == false)
             {
-                Informacion.Add(new Peliculas("Pelicula", txtTitulo.Text, Int32.Parse(txtAño.Text), "", "", "",0)) ;
-                txtTitulo.Text = "";
-                txtAño.Text = "";
-               
+                Informacion.Add(new Peliculas("Pelicula", ((ParametrosNuevos)(grdEditar.Children[0])).txtTitulo.Text,
+                    Int32.Parse(((ParametrosNuevos)(grdEditar.Children[0])).txtAño.Text), 
+                    ((ParametrosNuevos)(grdEditar.Children[0])).txtGenero.Text, 
+                    ((ParametrosNuevos)(grdEditar.Children[0])).txtDirector.Text,
+                    ((ParametrosNuevos)(grdEditar.Children[0])).txtDescripcion.Text,
+                    ((ParametrosNuevos)(grdEditar.Children[0])).cbRat.SelectedIndex
+                    ));
+                
+                (((ParametrosNuevos)(grdEditar.Children[0])).txtTitulo.Text) = "";
+                ((ParametrosNuevos)(grdEditar.Children[0])).txtAño.Text = "";
+                (((ParametrosNuevos)(grdEditar.Children[0])).txtGenero.Text) = "";
+                (((ParametrosNuevos)(grdEditar.Children[0])).txtDirector.Text) = "";
+                (((ParametrosNuevos)(grdEditar.Children[0])).txtDescripcion.Text) = "";
+                ((ParametrosNuevos)(grdEditar.Children[0])).cbRat.SelectedIndex = 0;
+
             }
 
             if (((ParametrosNuevos)(grdEditar.Children[0])).rbPelicula.IsChecked == false &&
                 ((ParametrosNuevos)(grdEditar.Children[0])).rbSerie.IsChecked == true)
             {
-                Informacion.Add(new Series("Serie", txtTitulo.Text, Int32.Parse(txtAño.Text), "", "", "", 0));
-                txtTitulo.Text = "";
-                txtAño.Text = "";
+               Informacion.Add(new Series("Serie", ((ParametrosNuevos)(grdEditar.Children[0])).txtTitulo.Text,
+                    Int32.Parse(((ParametrosNuevos)(grdEditar.Children[0])).txtAño.Text),
+                    ((ParametrosNuevos)(grdEditar.Children[0])).txtGenero.Text,
+                    ((ParametrosNuevos)(grdEditar.Children[0])).txtProduccion.Text,
+                    ((ParametrosNuevos)(grdEditar.Children[0])).txtDescripcion.Text,
+                    ((ParametrosNuevos)(grdEditar.Children[0])).cbRat.SelectedIndex
+                    ));
+
+                (((ParametrosNuevos)(grdEditar.Children[0])).txtTitulo.Text) = "";
+                ((ParametrosNuevos)(grdEditar.Children[0])).txtAño.Text = "";
+                (((ParametrosNuevos)(grdEditar.Children[0])).txtGenero.Text) = "";
+                (((ParametrosNuevos)(grdEditar.Children[0])).txtDirector.Text) = "";
+                (((ParametrosNuevos)(grdEditar.Children[0])).txtDescripcion.Text) = "";
+                ((ParametrosNuevos)(grdEditar.Children[0])).cbRat.SelectedIndex = 0;
             }
             grdEditar.Children.Clear();
-            txtTitulo.Visibility = Visibility.Hidden;
+
+
+
+           /* txtTitulo.Visibility = Visibility.Hidden;
             txtAño.Visibility = Visibility.Hidden;
             lblTitulo.Visibility = Visibility.Hidden;
             lblAño.Visibility = Visibility.Hidden;
-
+            */
 
         }
 
@@ -189,10 +216,10 @@ namespace ProyectoFinal
             btnAño.Visibility = Visibility.Visible;
             btnAño2.Visibility = Visibility.Visible;
 
-            txtTitulo.Visibility = Visibility.Hidden;
+          /*  txtTitulo.Visibility = Visibility.Hidden;
             txtAño.Visibility = Visibility.Hidden;
             lblTitulo.Visibility = Visibility.Hidden;
-            lblAño.Visibility = Visibility.Hidden;
+            lblAño.Visibility = Visibility.Hidden;*/
         }
         
         //Visualizar elemento
@@ -200,7 +227,7 @@ namespace ProyectoFinal
         {
             if (lstPelis.SelectedIndex != -1)
             {
-                
+                grdStars.Visibility = Visibility.Visible;
                 grdEditar.Children.Clear();
                 grdEditar.Children.Add(new VisualizarElemento());
                 btnEliminarElemento.Visibility = Visibility.Visible;
@@ -214,11 +241,11 @@ namespace ProyectoFinal
                 btnGuardar.Visibility = Visibility.Hidden;
                 btnCancelar.Visibility = Visibility.Hidden;
 
-                txtTitulo.Visibility = Visibility.Hidden;
+               /* txtTitulo.Visibility = Visibility.Hidden;
                 txtAño.Visibility = Visibility.Hidden;
                 lblTitulo.Visibility = Visibility.Hidden;
                 lblAño.Visibility = Visibility.Hidden;
-
+                */
 
                 ((VisualizarElemento)(grdEditar.Children[0])).txtTipo.Text = Informacion[lstPelis.SelectedIndex].Tipo;
                 ((VisualizarElemento)(grdEditar.Children[0])).txtTitulo.Text = Informacion[lstPelis.SelectedIndex].Titulo;
@@ -226,7 +253,8 @@ namespace ProyectoFinal
                 ((VisualizarElemento)(grdEditar.Children[0])).txtGenero.Text = Informacion[lstPelis.SelectedIndex].Genero;
                 ((VisualizarElemento)(grdEditar.Children[0])).txtDirector.Text = Informacion[lstPelis.SelectedIndex].Director;
                 ((VisualizarElemento)(grdEditar.Children[0])).txtSinopsis.Text = Informacion[lstPelis.SelectedIndex].Sinopsis;
-                
+                ((VisualizarElemento)(grdEditar.Children[0])).txtRating.Text = Informacion[lstPelis.SelectedIndex].Rating.ToString();
+
 
             }
         }

@@ -97,10 +97,20 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <TextBox x:Name="txtTitulo" Visibility="Hidden" HorizontalAlignment="Left" Height="23" Margin="390,143,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="360" Background="#FFB9B9B9" Foreground="White"/>
-        <TextBox x:Name="txtAño" Visibility="Hidden" HorizontalAlignment="Left" Height="23" Margin="390,170,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="79" Background="#FFB9B9B9" Foreground="White"/>
-        <TextBlock x:Name="lblTitulo" HorizontalAlignment="Left" Visibility="Hidden" Margin="286,143,0,0" TextWrapping="Wrap" Text="TITULO" VerticalAlignment="Top" Foreground="White" FontFamily="Lucida Sans"/>
-        <TextBlock x:Name="lblAño" HorizontalAlignment="Left"  Visibility="Hidden" Margin="286,171,0,0" TextWrapping="Wrap" Text="AÑO" VerticalAlignment="Top" Foreground="White"/>
+        <Grid x:Name="grdStars" Visibility="Hidden" Margin="393,308,225.6,79">
+            <Image x:Name="star1" Margin="0,0,140,0" Source="Image.png" Stretch="Fill"/>
+            <Image x:Name="star2" Margin="35,0,105,0" Source="Image.png" Stretch="Fill"/>
+            <Image x:Name="star3" Margin="70,0" Source="Image.png" Stretch="Fill"/>
+            <Image x:Name="star4" Margin="105,0,35,0" Source="Image.png" Stretch="Fill"/>
+            <Image x:Name="star5" Margin="140,0,0,0" Source="Image.png" Stretch="Fill"/>
+
+
+
+
+        </Grid>
+
+
+
 
     </Grid>
 </Window>

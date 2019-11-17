@@ -21,11 +21,7 @@
         <TextBox x:Name="txtSinopsis" HorizontalAlignment="Left" Height="101" Margin="107,151,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="360" Background="White" Foreground="Gray" IsEnabled="False" FontFamily="Lucida Sans" FontSize="14" FontWeight="Bold"/>
         <TextBlock HorizontalAlignment="Left" Margin="4,122,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White" Text="DIRECTOR" FontFamily="Lucida Sans"/>
         <TextBox x:Name="txtTipo" HorizontalAlignment="Left" Height="23" Margin="107,41,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="79" Background="White" Foreground="Gray" IsEnabled="False" FontWeight="Bold" FontFamily="Lucida Sans" FontSize="14"/>
-        <Image x:Name="star2" HorizontalAlignment="Left" Height="43" Margin="155,257,0,0" VerticalAlignment="Top" Width="43" Source="images/estrella1.png"/>
-        <Image x:Name="star3" HorizontalAlignment="Left" Height="43" Margin="203,257,0,0" VerticalAlignment="Top" Width="43" Source="images/estrella1.png"/>
-        <Image x:Name="star4" HorizontalAlignment="Left" Height="43" Margin="251,257,0,0" VerticalAlignment="Top" Width="43" Source="images/estrella2.png"/>
-        <Image HorizontalAlignment="Left" Height="43" Margin="299,257,0,0" VerticalAlignment="Top" Width="43" Source="images/estrella2.png"/>
-        <Image x:Name="star1" HorizontalAlignment="Left" Height="43"  Width="43" Source="images/estrella1.png" Margin="107,257,0,149.6"/>
+        <TextBox x:Name="txtRating" Visibility="Hidden" HorizontalAlignment="Left" Height="23" Margin="107,257,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
 
     </Grid>
 </UserControl>

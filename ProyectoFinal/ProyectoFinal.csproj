@@ -62,12 +62,6 @@
     <Compile Include="ParametrosNuevos.xaml.cs">
       <DependentUpon>ParametrosNuevos.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ParametrosPeliculas.xaml.cs">
-      <DependentUpon>ParametrosPeliculas.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ParametrosSeries.xaml.cs">
-      <DependentUpon>ParametrosSeries.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Series.cs" />
     <Compile Include="VisualizarElemento.xaml.cs">
       <DependentUpon>VisualizarElemento.xaml</DependentUpon>
@@ -89,14 +83,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="ParametrosNuevos.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="ParametrosPeliculas.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="ParametrosSeries.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -132,26 +118,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="estrella1.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="estrellas.jpg">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Resource>
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="estrella11.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="estrella12.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="estrella2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="estrella21.png" />
+    <Resource Include="Image.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

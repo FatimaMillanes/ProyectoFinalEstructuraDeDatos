@@ -31,9 +31,15 @@ namespace ProyectoFinal
        private void RadioButton_Checked(object sender, RoutedEventArgs e)
          {
              if (rbPelicula.IsChecked == true) {
-                grdNuevo.Children.Clear();
-                grdNuevo.Children.Add(new ParametrosPeliculas());
-                
+                txtDirector.Visibility = Visibility.Visible;
+                lblDirector.Visibility = Visibility.Visible;
+                lblSinopsis.Visibility = Visibility.Visible;
+
+                lblDescripcion.Visibility = Visibility.Hidden;
+                lblTemp.Visibility = Visibility.Hidden;
+                cbTemp.Visibility = Visibility.Hidden;
+                lblProduccion.Visibility = Visibility.Hidden;
+                txtProduccion.Visibility = Visibility.Hidden;
             }
 
          }
@@ -42,9 +48,15 @@ namespace ProyectoFinal
          {
              if (rbSerie.IsChecked == true)
              {
-                grdNuevo.Children.Clear();
-                grdNuevo.Children.Add(new ParametrosSeries());
+                txtDirector.Visibility = Visibility.Hidden;
+                lblDirector.Visibility = Visibility.Hidden;
+                lblSinopsis.Visibility = Visibility.Hidden;
 
+                lblDescripcion.Visibility = Visibility.Visible;
+                lblTemp.Visibility = Visibility.Visible;
+                cbTemp.Visibility = Visibility.Visible;
+                lblProduccion.Visibility = Visibility.Visible;
+                txtProduccion.Visibility = Visibility.Visible;
             }
          }
 

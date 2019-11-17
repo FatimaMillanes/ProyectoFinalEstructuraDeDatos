@@ -8,12 +8,59 @@
     <Grid>
         <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="AGREGAR NUEVO ELEMENTO" VerticalAlignment="Top" Height="53" Width="305" Foreground="#FF8C8C8C" FontSize="18" FontFamily="Segoe UI Black"/>
         <TextBlock HorizontalAlignment="Left" Margin="10,40,0,0" TextWrapping="Wrap" Text="TIPO:" VerticalAlignment="Top" Foreground="White" FontFamily="Lucida Sans"/>
-       
-        
+
+
 
         <RadioButton x:Name="rbPelicula" Content="PELICULA" HorizontalAlignment="Left" Margin="68,38,0,0" VerticalAlignment="Top" Foreground="White" Checked="RadioButton_Checked"/>
         <RadioButton x:Name="rbSerie" Content="SERIE" HorizontalAlignment="Left" Margin="169,38,0,0" VerticalAlignment="Top" Foreground="White" Background="White" BorderBrush="White" Checked="rbSerie_Checked"/>
-        <Grid x:Name="grdNuevo" HorizontalAlignment="Left" Height="226" Margin="0,59,0,0" VerticalAlignment="Top" Width="800"/>
-
+        <TextBlock HorizontalAlignment="Left" Margin="262,117,0,0" TextWrapping="Wrap" Text="GENERO" VerticalAlignment="Top" Foreground="White" FontFamily="Lucida Sans"/>
+        <TextBox x:Name="txtGenero" HorizontalAlignment="Left" Height="23" Margin="345,117,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="119" Background="#FFB9B9B9" Foreground="White"/>
+        <TextBox x:Name="txtDirector"  HorizontalAlignment="Left" Height="23" Margin="104,145,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="360" Background="#FFB9B9B9" Foreground="White"/>
+        <TextBlock x:Name="lblSinopsis"  HorizontalAlignment="Left" Margin="0,171,0,0" TextWrapping="Wrap" Text="SINOPSIS" VerticalAlignment="Top" Foreground="White"/>
+        <TextBox x:Name="txtDescripcion" HorizontalAlignment="Left" Height="47" Margin="104,173,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="360" Background="#FFB9B9B9" Foreground="White"/>
+        <TextBlock HorizontalAlignment="Left" Margin="0,225,0,0" TextWrapping="Wrap" Text="RATING" VerticalAlignment="Top" Foreground="White"/>
+        <ComboBox x:Name="cbRat" HorizontalAlignment="Left" Margin="104,225,0,0" VerticalAlignment="Top" Width="36" Foreground="Black" BorderBrush="{x:Null}">
+            <ComboBox.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                    <GradientStop Color="#FFB9B9B9" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.Background>
+            <ComboBoxItem Background="#FFB9B9B9" BorderBrush="{x:Null}" Content="0"/>
+            <ComboBoxItem Background="#FFB9B9B9" BorderBrush="{x:Null}" Content="1"/>
+            <ComboBoxItem Background="#FFB9B9B9" BorderBrush="{x:Null}" Content="2"/>
+            <ComboBoxItem Background="#FFB9B9B9" BorderBrush="{x:Null}" Content="3"/>
+            <ComboBoxItem Background="#FFB9B9B9" BorderBrush="{x:Null}" Content="4"/>
+            <ComboBoxItem Background="#FFB9B9B9" BorderBrush="{x:Null}" Content="5"/>
+        </ComboBox>
+        <TextBlock x:Name="lblDirector" HorizontalAlignment="Left" Margin="0,145,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White" Text="DIRECTOR" FontFamily="Lucida Sans"/>
+        <TextBlock x:Name="lblTemp" Visibility="Hidden" HorizontalAlignment="Left" Margin="0,145,0,0" TextWrapping="Wrap" Text="TEMPORADAS" VerticalAlignment="Top" Foreground="White" FontFamily="Lucida Sans"/>
+        <ComboBox x:Name="cbTemp" Visibility="Hidden" HorizontalAlignment="Left" Margin="104,145,0,0" VerticalAlignment="Top" Width="36" Foreground="Black">
+            <ComboBox.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                    <GradientStop Color="#FFB9B9B9" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.Background>
+            <ComboBoxItem Background="#FFB9B9B9" BorderBrush="{x:Null}" Content="1"/>
+            <ComboBoxItem Background="#FFB9B9B9" BorderBrush="{x:Null}" Content="2"/>
+            <ComboBoxItem Background="#FFB9B9B9" BorderBrush="{x:Null}" Content="3"/>
+            <ComboBoxItem Background="#FFB9B9B9" BorderBrush="{x:Null}" Content="4"/>
+            <ComboBoxItem Background="#FFB9B9B9" BorderBrush="{x:Null}" Content="5"/>
+            <ComboBoxItem Background="#FFB9B9B9" BorderBrush="{x:Null}" Content="6"/>
+            <ComboBoxItem Background="#FFB9B9B9" BorderBrush="{x:Null}" Content="7"/>
+            <ComboBoxItem Background="#FFB9B9B9" BorderBrush="{x:Null}" Content="8"/>
+            <ComboBoxItem Background="#FFB9B9B9" BorderBrush="{x:Null}" Content="9"/>
+            <ComboBoxItem Background="#FFB9B9B9" BorderBrush="{x:Null}" Content="10"/>
+        </ComboBox>
+        <TextBlock HorizontalAlignment="Left" Margin="258,148,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtProduccion" Visibility="Hidden" HorizontalAlignment="Left" Height="23" Margin="345,145,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="119" Background="#FFB9B9B9" Foreground="White"/>
+        <TextBlock x:Name="lblDescripcion" Visibility="Hidden" HorizontalAlignment="Left" Margin="0,173,0,0" TextWrapping="Wrap" Text="DESCRIPCION" VerticalAlignment="Top" Foreground="White" FontFamily="Lucida Sans"/>
+        <TextBlock x:Name="lblProduccion" Visibility="Hidden" HorizontalAlignment="Left" Margin="262,145,0,0" TextWrapping="Wrap" Text="PRODUCCION" VerticalAlignment="Top" Foreground="White" FontFamily="Lucida Sans"/>
+        <TextBox x:Name="txtTitulo" HorizontalAlignment="Left" Height="23" Margin="104,89,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="360" Background="#FFB9B9B9" Foreground="White"/>
+        <TextBox x:Name="txtAño"  HorizontalAlignment="Left" Height="23" Margin="104,117,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="79" Background="#FFB9B9B9" Foreground="White"/>
+        <TextBlock x:Name="lblTitulo" HorizontalAlignment="Left" Margin="0,89,0,0" TextWrapping="Wrap" Text="TITULO" VerticalAlignment="Top" Foreground="White" FontFamily="Lucida Sans"/>
+        <TextBlock x:Name="lblAño" HorizontalAlignment="Left"  Margin="0,117,0,0" TextWrapping="Wrap" Text="AÑO" VerticalAlignment="Top" Foreground="White"/>
+        
     </Grid>
 </UserControl>
