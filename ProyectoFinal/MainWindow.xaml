@@ -114,6 +114,22 @@
 
 
         </StackPanel>
+        <StackPanel x:Name="spStars2" Visibility="Hidden" Margin="389,315,228.6,70" Orientation="Horizontal">
+            <Image Margin="0,0,0,0.2" Source="estrella2.png" Stretch="Fill" Width="35"/>
+
+
+
+
+
+
+
+
+
+            <Image Margin="0,0,0,0.2" Source="estrella2.png" Stretch="Fill" Width="35"/>
+            <Image Margin="0,0,0,0.2" Source="estrella2.png" Stretch="Fill" Width="35"/>
+            <Image Margin="0,0,0,0.2" Source="estrella2.png" Stretch="Fill" Width="35"/>
+            <Image Margin="0,0,0,0.2" Source="estrella2.png" Stretch="Fill" Width="35"/>
+        </StackPanel>
 
 
 

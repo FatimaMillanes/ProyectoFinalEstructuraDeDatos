@@ -264,6 +264,7 @@ namespace ProyectoFinal
                     star3.Visibility = Visibility.Hidden;
                     star4.Visibility = Visibility.Hidden;
                     star5.Visibility = Visibility.Hidden;
+                    spStars2.Visibility = Visibility.Visible;
                 }
                 if (((VisualizarElemento)(grdEditar.Children[0])).txtRating.Text == "1")
                 {
@@ -274,7 +275,7 @@ namespace ProyectoFinal
                     star3.Visibility = Visibility.Hidden;
                     star4.Visibility = Visibility.Hidden;
                     star5.Visibility = Visibility.Hidden;
-
+                    spStars2.Visibility = Visibility.Visible;
                 }
                 if (((VisualizarElemento)(grdEditar.Children[0])).txtRating.Text == "2")
                 {
@@ -285,6 +286,7 @@ namespace ProyectoFinal
                     star3.Visibility = Visibility.Hidden;
                     star4.Visibility = Visibility.Hidden;
                     star5.Visibility = Visibility.Hidden;
+                    spStars2.Visibility = Visibility.Visible;
                 }
                 if (((VisualizarElemento)(grdEditar.Children[0])).txtRating.Text == "3")
                 {
@@ -294,6 +296,7 @@ namespace ProyectoFinal
                     star3.Visibility = Visibility.Visible;
                     star4.Visibility = Visibility.Hidden;
                     star5.Visibility = Visibility.Hidden;
+                    spStars2.Visibility = Visibility.Visible;
                 }
                 if (((VisualizarElemento)(grdEditar.Children[0])).txtRating.Text == "4")
                 {
@@ -303,6 +306,7 @@ namespace ProyectoFinal
                     star3.Visibility = Visibility.Visible;
                     star4.Visibility = Visibility.Visible;
                     star5.Visibility = Visibility.Hidden;
+                    spStars2.Visibility = Visibility.Visible;
                 }
                 if (((VisualizarElemento)(grdEditar.Children[0])).txtRating.Text == "5")
                 {
@@ -324,6 +328,7 @@ namespace ProyectoFinal
             grdEditar.Children.Clear();
             grdEditar.Children.Add(new EditarElemento());
             spStars.Visibility = Visibility.Hidden;
+            spStars2.Visibility = Visibility.Hidden;
 
         }
 
@@ -339,6 +344,7 @@ namespace ProyectoFinal
             btnAño.Visibility = Visibility.Visible;
             btnAño2.Visibility = Visibility.Visible;
             spStars.Visibility = Visibility.Hidden;
+            spStars2.Visibility = Visibility.Hidden;
 
             if (lstPelis.SelectedIndex != -1)
             {
@@ -358,6 +364,7 @@ namespace ProyectoFinal
             btnAño.Visibility = Visibility.Visible;
             btnAño2.Visibility = Visibility.Visible;
             spStars.Visibility = Visibility.Hidden;
+            spStars2.Visibility = Visibility.Hidden;
         }
     }
 
