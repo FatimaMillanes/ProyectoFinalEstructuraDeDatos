@@ -97,6 +97,10 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
+        <TextBox x:Name="txtTitulo" Visibility="Hidden" HorizontalAlignment="Left" Height="23" Margin="390,173,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="360" Background="#FFB9B9B9" Foreground="White"/>
+        <TextBox x:Name="txtAño" Visibility="Hidden" HorizontalAlignment="Left" Height="23" Margin="390,200,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="79" Background="#FFB9B9B9" Foreground="White"/>
+        <TextBlock x:Name="lblTitulo" HorizontalAlignment="Left" Visibility="Hidden" Margin="286,173,0,0" TextWrapping="Wrap" Text="TITULO" VerticalAlignment="Top" Foreground="White" FontFamily="Lucida Sans"/>
+        <TextBlock x:Name="lblAño" HorizontalAlignment="Left"  Visibility="Hidden" Margin="286,202,0,0" TextWrapping="Wrap" Text="AÑO" VerticalAlignment="Top" Foreground="White"/>
 
     </Grid>
 </Window>

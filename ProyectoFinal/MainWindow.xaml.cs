@@ -30,7 +30,7 @@ namespace ProyectoFinal
         {
             InitializeComponent();
 
-            Peliculas peliculas1 = new Peliculas("Aquaman", 2018);
+            Peliculas peliculas1 = new Peliculas("Suicide Squad", 2016);
             Peliculas peliculas2 = (new Peliculas("Wonder Woman", 2017));
             Peliculas peliculas3 = (new Peliculas("Batman vs Superman", 2016));
             Peliculas peliculas4 = (new Peliculas("The Dark Knight", 2008));
@@ -38,7 +38,7 @@ namespace ProyectoFinal
             Series series1 = (new Series("Supergirl", 2015));
             Series series2 = (new Series("Flash", 2014));
             Series series3 = (new Series("Arrow", 2012));
-            Series series4 = (new Series("Gotham", 2014));
+            Series series4 = (new Series("Titans", 2018));
             Series series5 = (new Series("Legends of Tomorrow", 2016));
 
 
@@ -129,10 +129,21 @@ namespace ProyectoFinal
             grdEditar.Children.Add(new ParametrosNuevos());
             btnGuardar.Visibility = Visibility.Visible;
             btnCancelar.Visibility = Visibility.Visible;
+
+            
+            txtTitulo.Visibility = Visibility.Visible;
+            txtAño.Visibility = Visibility.Visible;
+            lblTitulo.Visibility = Visibility.Visible;
+            lblAño.Visibility = Visibility.Visible;
+
+
+
+
+
         }
         private void btnGuardar_Click(object sender, RoutedEventArgs e)
         {
-            grdEditar.Children.Clear();
+            
             btnGuardar.Visibility = Visibility.Hidden;
             btnCancelar.Visibility = Visibility.Hidden;
             btnNuevo.Visibility = Visibility.Visible;
@@ -140,6 +151,29 @@ namespace ProyectoFinal
             btnOrdenar2.Visibility = Visibility.Visible;
             btnAño.Visibility = Visibility.Visible;
             btnAño2.Visibility = Visibility.Visible;
+
+            if (((ParametrosNuevos)(grdEditar.Children[0])).rbPelicula.IsChecked == true && 
+                ((ParametrosNuevos)(grdEditar.Children[0])).rbSerie.IsChecked == false)
+            {
+                Informacion.Add(new Peliculas(txtTitulo.Text, Int32.Parse(txtAño.Text)));
+                txtTitulo.Text = "";
+                txtAño.Text = "";
+            }
+
+            if (((ParametrosNuevos)(grdEditar.Children[0])).rbPelicula.IsChecked == false &&
+                ((ParametrosNuevos)(grdEditar.Children[0])).rbSerie.IsChecked == true)
+            {
+                Informacion.Add(new Peliculas(txtTitulo.Text, Int32.Parse(txtAño.Text)));
+                txtTitulo.Text = "";
+                txtAño.Text = "";
+            }
+            grdEditar.Children.Clear();
+            txtTitulo.Visibility = Visibility.Hidden;
+            txtAño.Visibility = Visibility.Hidden;
+            lblTitulo.Visibility = Visibility.Hidden;
+            lblAño.Visibility = Visibility.Hidden;
+
+
         }
 
         private void btnCancelar_Click(object sender, RoutedEventArgs e)
@@ -153,6 +187,11 @@ namespace ProyectoFinal
             btnOrdenar2.Visibility = Visibility.Visible;
             btnAño.Visibility = Visibility.Visible;
             btnAño2.Visibility = Visibility.Visible;
+
+            txtTitulo.Visibility = Visibility.Hidden;
+            txtAño.Visibility = Visibility.Hidden;
+            lblTitulo.Visibility = Visibility.Hidden;
+            lblAño.Visibility = Visibility.Hidden;
         }
         
         //Visualizar elemento

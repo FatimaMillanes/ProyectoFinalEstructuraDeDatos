@@ -6,10 +6,6 @@
              xmlns:local="clr-namespace:ProyectoFinal"
              mc:Ignorable="d" d:DesignWidth="800" Height="168.312">
     <Grid>
-        <TextBlock HorizontalAlignment="Left" Margin="2,0,0,0" TextWrapping="Wrap" Text="TITULO" VerticalAlignment="Top" Foreground="White" FontFamily="Lucida Sans"/>
-        <TextBox x:Name="txtTitulo" HorizontalAlignment="Left" Height="23" Margin="104,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="360" Background="#FFB9B9B9" Foreground="White"/>
-        <TextBlock HorizontalAlignment="Left" Margin="2,29,0,0" TextWrapping="Wrap" Text="AÑO" VerticalAlignment="Top" Foreground="White" FontFamily="Lucida Sans"/>
-        <TextBox x:Name="txtAño" HorizontalAlignment="Left" Height="23" Margin="104,28,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="79" Background="#FFB9B9B9" Foreground="White"/>
         <TextBlock HorizontalAlignment="Left" Margin="258,29,0,0" TextWrapping="Wrap" Text="GENERO" VerticalAlignment="Top" Foreground="White" FontFamily="Lucida Sans"/>
         <TextBox x:Name="txtGenero" HorizontalAlignment="Left" Height="23" Margin="345,28,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="119" Background="#FFB9B9B9" Foreground="White"/>
         <TextBlock HorizontalAlignment="Left" Margin="1,56,0,0" TextWrapping="Wrap" Text="TEMPORADAS" VerticalAlignment="Top" Foreground="White" FontFamily="Lucida Sans"/>
